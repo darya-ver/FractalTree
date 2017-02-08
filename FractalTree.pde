@@ -12,17 +12,18 @@ public void setup()
 } 
 public void draw() 
 {   
-	background(0);   
-	stroke(102,51,0);
-	strokeWeight(10);  
+	background(0);     
 
 	fill(255);
 	textSize(70);
 	text("Click anywhere to pause the trees", 170,100);
 
+	stroke(102,51,0);
+	strokeWeight(10);
 	line(width/4,700,width/4,700-initialLength);   
 	drawThing3(width/4, 700-initialLength, 100, 3*PI/2, 10);
 
+	stroke(102,51,0);
 	strokeWeight(10);
 	line(3*width/4, 700, 3*width/4, 700-initialLength);
 	drawThing2(3*width/4,700-initialLength,100,3*PI/2, 10);
@@ -63,8 +64,8 @@ public void drawThing2(int x, int y, double branchLength, float angle, float str
 		drawThing2(x2, y2, branchLength*fractionLength, angle2, strokee/1.3);
 	}
 	
-	/*
-	if(branchLength < 14)
+	
+	if(branchLength < 14 && paause == true)
 	{
 		stroke(170,128,255);
 		fill(204,179,255,150);
@@ -72,7 +73,7 @@ public void drawThing2(int x, int y, double branchLength, float angle, float str
 		ellipse(x2, y2, circleSize, circleSize);
 		ellipse(x1, y1, circleSize, circleSize);
 	}	
-	*/	
+
 } 
 
 public void drawThing3(int x, int y, double branchLength, float angle, float strokee) 
@@ -106,8 +107,8 @@ public void drawThing3(int x, int y, double branchLength, float angle, float str
 		drawThing3(x2, y2, branchLength*fractionLength, angle2, strokee/1.3);
 	}
 
-	/*
-	if(branchLength < 14)
+	
+	if(branchLength < 50 && paause == true)
 	{
 		stroke(170,128,255);
 		fill(204,179,255,150);
@@ -115,7 +116,7 @@ public void drawThing3(int x, int y, double branchLength, float angle, float str
 		ellipse(x2, y2, circleSize, circleSize);
 		ellipse(x1, y1, circleSize, circleSize);
 	}	
-	*/	
+		
 } 
 
 
