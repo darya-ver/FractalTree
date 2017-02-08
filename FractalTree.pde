@@ -1,32 +1,33 @@
 private double fractionLength = .8; 
 private int smallestBranch = 10; 
 private float branchAngle = .3;  
-private int initialLength = 100;
+private int initialLength = 50;
 
 private boolean paause = false;
 
 public void setup() 
 {   
-	size(1500,800);    
-	//noLoop(); 
+	size(1000,800);
+	textAlign(CENTER);
+		//noLoop(); 
 } 
 public void draw() 
 {   
 	background(0);     
 
 	fill(255);
-	textSize(70);
-	text("Click anywhere to pause the trees", 170,100);
+	textSize(40);
+	text("Click anywhere to pause the trees", width/2,100);
 
 	stroke(102,51,0);
 	strokeWeight(10);
-	line(width/4,700,width/4,700-initialLength);   
-	drawThing3(width/4, 700-initialLength, 100, 3*PI/2, 10);
+	line(width/4,600,width/4,600-initialLength);   
+	drawThing3(width/4, 600-initialLength, initialLength, 3*PI/2, 10);
 
 	stroke(102,51,0);
 	strokeWeight(10);
-	line(3*width/4, 700, 3*width/4, 700-initialLength);
-	drawThing2(3*width/4,700-initialLength,100,3*PI/2, 10);
+	line(3*width/4, 600, 3*width/4, 600-initialLength);
+	drawThing2(3*width/4,600-initialLength,initialLength,3*PI/2, 10);
 	
 	//drawThing4(3*width/4,700-initialLength,100,3*PI/2, 10);
 
