@@ -5,7 +5,7 @@ private int initialLength = 50;
 
 private boolean paause = false;
 
-float hh = 110;
+float hh = 200;
 float ll = hh*1.618033;
 
 public void setup() 
@@ -17,9 +17,9 @@ public void setup()
 
 public void draw() 
 {   
-	background(0);     
+	background(204, 255, 204);     
 
-	fill(255);
+	fill(150);
 	textSize(40);
 	text("Click anywhere to pause the trees", width/2,100);
 
@@ -33,10 +33,9 @@ public void draw()
 	line(3*width/4, 600, 3*width/4, 600-initialLength);
 	drawThing2(3*width/4,600-initialLength,initialLength,3*PI/2, 10);
 	
-	if(paause == false) {branchAngle += 0.005; hh+=0.5;ll=hh*1.618033;}
+	if(paause == false) {branchAngle += 0.005;}// hh+=0.5;ll=hh*1.618033;}
 
-	rect(100,100, ll, hh);
-  	translate(100,100);
+  	translate(400,150);
   	fractalSquareRect(ll, hh);
 	
 } 
@@ -121,29 +120,22 @@ public void drawThing3(int x, int y, double branchLength, float angle, float str
 	}		
 } 
 
-
-// void setup()
-// {
-//   size(500,500);
-// }
-
-// void draw()
-// {
-//   rect(100,100, ll, hh);
-//   translate(100,100);
-//   fractalSquareRect(ll, hh);
-// }
-
 void fractalSquareRect(float l, float h)
 {
-  rect(0, 0, h, h);
-  arc(h, h, h*2, h*2, PI, 3*PI/2);
-  line(h,0,h,h);
-  line(0,h,h,h);
-  translate(l,0);
-  rotate(PI/2);
-  if(h > 5)
-    fractalSquareRect(h, l-h);
+	noFill();
+	stroke(255,0,0);
+
+    //rect(0, 0, h, h);
+	arc(h, h, h*2, h*2, PI, 3*PI/2);
+	
+	//line(h,0,h,h);
+  	//line(0,h,h,h);
+ 	
+ 	translate(l,0);
+ 	rotate(PI/2);
+  	
+  	if(h > 0)
+    	fractalSquareRect(h, l-h);
 }
 
 
