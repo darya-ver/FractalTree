@@ -123,13 +123,10 @@ public void drawThing3(int x, int y, double branchLength, float angle, float str
 void fractalSquareRect(float l, float h)
 {
 	noFill();
+	
 	stroke(255,0,0);
 
-    //rect(0, 0, h, h);
 	arc(h, h, h*2, h*2, PI, 3*PI/2);
-	
-	//line(h,0,h,h);
-  	//line(0,h,h,h);
  	
  	translate(l,0);
  	rotate(PI/2);
